@@ -1,0 +1,11 @@
+        let n1 = 7.5; // valor da primeira nota
+        let n2 = 8.2; // valor da segunda nota
+        let n3 = 6.9; // valor da terceira nota
+
+        let p1 = 0.3; // peso da primeira nota
+        let p2 = 0.4; // peso da segunda nota
+        let p3 = 0.3; // peso da terceira nota
+
+        let media = (n1 * p1 + n2 * p2 + n3 * p3) / (p1 + p2 + p3);
+
+        console.log("A média ponderada das notas é: " + media.toFixed(2));
