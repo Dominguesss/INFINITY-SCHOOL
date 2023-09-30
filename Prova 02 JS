@@ -1,0 +1,23 @@
+function calcularEstatisticasNotas() {
+    let numeroEstudantes = parseInt(prompt("Digite o número total de estudantes na turma:"));
+    let notas = [];
+    let somaNotas = 0;
+    let maiorNota = -Infinity;
+    let menorNota = Infinity;
+
+    for (let i = 0; i < numeroEstudantes; i++) {
+        let nota = parseFloat(prompt(`Digite a nota do aluno ${i + 1}:`));
+        notas.push(nota);
+        somaNotas += nota;
+        maiorNota = Math.max(maiorNota, nota);
+        menorNota = Math.min(menorNota, nota);
+    }
+
+    let mediaTurma = somaNotas / numeroEstudantes;
+
+    alert(`Média da turma: ${mediaTurma.toFixed(2)}`);
+    alert(`Maior nota obtida: ${maiorNota}`);
+    alert(`Menor nota obtida: ${menorNota}`);
+}
+
+calcularEstatisticasNotas();
