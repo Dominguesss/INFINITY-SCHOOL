@@ -1,0 +1,39 @@
+def main():
+    # Cria uma lista vazia para armazenar os valores digitados pelo usuário
+    valores = []
+
+    # Solicita ao usuário que digite 10 valores
+    for i in range(10):
+        valor = float(input(f"Digite o {i + 1}º valor: "))
+        valores.append(valor)
+
+    # Separa os números pares e ímpares em listas diferentes
+    numeros_pares = []
+    numeros_impares = []
+    for valor in valores:
+        if valor % 2 == 0:
+            numeros_pares.append(valor)
+        else:
+            numeros_impares.append(valor)
+
+    # Exibe os números pares
+    print("Números pares:", numeros_pares)
+
+    # Cria uma tupla com os números ímpares
+    tupla_impares = tuple(numeros_impares)
+    print("Números ímpares (tupla):", tupla_impares)
+
+    # Calcula a quantidade de números pares e ímpares
+    qtd_pares = len(numeros_pares)
+    qtd_impares = len(numeros_impares)
+    print(f"Quantidade de números pares: {qtd_pares}")
+    print(f"Quantidade de números ímpares: {qtd_impares}")
+
+    # Calcula a soma dos números pares e ímpares
+    soma_pares = sum(numeros_pares)
+    soma_impares = sum(numeros_impares)
+    print(f"Soma dos números pares: {soma_pares}")
+    print(f"Soma dos números ímpares: {soma_impares}")
+
+if __name__ == "__main__":
+    main()
